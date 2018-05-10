@@ -1,2 +1,2 @@
 # HandyNode
-A mini node js framework 😅.
+A mini node js boilerplate 😅.
