@@ -3,6 +3,11 @@ exports.success = function (data = [], message = 'Operation Successful', status=
     return response( data, message, status );
 }
 
+// Invalid credentials
+exports.invalidCredentials = function (data = [], message = 'Invalid Credentials', status='400') {
+    return response( data, message, status );
+}
+
 
 function response(data = [], message = '', status = '200'){
     // Check if its an array else make it an array
