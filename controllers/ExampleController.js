@@ -1,5 +1,5 @@
 // const bcrypt = require('bcrypt');
-// const response = require('../responses');
+const response = require('../responses');
 
 /**
  * All functions are accessible to
