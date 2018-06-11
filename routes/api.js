@@ -1,18 +1,20 @@
 const express = require('express');
-const response = require('../responses');
+// const response = require('../responses');
 const router = express.Router();
+var controller = require('../controllers/Controller'); // Require controller Register
 
-// Require Controllers
-var AuthController = require('../controllers/AuthController');
+/**
+ * Here is where you register your routes,
+ * Simply call the router and assign your method,
+ * You can assign  a callback or simply call a controller from
+ * the controller class like (controller.ExampleController.hello)
+ * 
+ */
+router.get('/', controller.ExampleController.hello);
+router.post('/signup', controller.AuthController.signup);
+router.post('/login', controller.AuthController.login);
 
-// Auth Routes
-router.post('/signup', AuthController.signup);
-router.post('/login', AuthController.login);
 
-router.get('/', function (req, res) {
-    console.log('It worked');
-    var arraydata = {'name': 'JD', 'age': '47'};
-    res.send(response.success(arraydata));
-});
 
+// Export the entire router to be accessed in the main app/server.js
 module.exports = router;
