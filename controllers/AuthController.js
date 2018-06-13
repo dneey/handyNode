@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const response = require('../responses');
 const User = require('../models/User');
+var firebase = require('../firebaseConfig');
 /**
  * 
  * @param {email, password} req 
