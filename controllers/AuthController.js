@@ -8,7 +8,7 @@ const User = require('../models/User');
  */
 exports.signup = function (req, res){
     console.log(req.body);
-    if (!req.body.email || !req.body.password) {
+    if (!req.name || !req.phoneNumber || !req.body.email || !req.body.password) {
         console.log('Unsuccessful');
         res.send(response.response([], 'Email and password are both required'));
     }
@@ -17,7 +17,16 @@ exports.signup = function (req, res){
     });
 
     // var user = new User;
-    var details = { 'email': req.body.email, 'password': hash }; // hash password
+    var details = { 'name': req.body.name, 'phoneNumber': req.body.phoneNumber, 'email': req.body.email, 'password': hash }; // hash password
+     
+    // Store in firebase or mongo db
+
+
+    // Send verification sms to the user to verify phone number
+
+
+    // return user to home page
+    
     res.send(response.success(details, 'Signup successful', '200'));
 }
 
