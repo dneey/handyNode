@@ -8,5 +8,7 @@
  * --------------------------------------------------------
  */
 
+
 exports.ExampleController = require('../controllers/ExampleController'); 
+exports.HomeController = require('../controllers/HomeController'); 
 exports.AuthController = require('../controllers/AuthController'); 

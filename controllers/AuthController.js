@@ -9,10 +9,13 @@ var firebase = require('../firebaseConfig');
  */
 exports.signup = function (req, res){
     console.log(req.body);
+    // Validate
     if (!req.name || !req.phoneNumber || !req.body.email || !req.body.password) {
         console.log('Unsuccessful');
         res.send(response.response([], 'Email and password are both required'));
     }
+
+    // hash password
     bcrypt.hash(req.body.password, 100, function (err, hash) {
         
     });
@@ -21,7 +24,7 @@ exports.signup = function (req, res){
     var details = { 'name': req.body.name, 'phoneNumber': req.body.phoneNumber, 'email': req.body.email, 'password': hash }; // hash password
      
     // Store in firebase or mongo db
-
+    
 
     // Send verification sms to the user to verify phone number
 

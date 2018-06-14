@@ -10,7 +10,8 @@ var controller = require('../controllers/Controller'); // Require controller Reg
  * the controller class like (controller.ExampleController.hello)
  * 
  */
-router.get('/', controller.ExampleController.hello);
+// router.get('/', controller.ExampleController.hello);
+router.get('/', controller.HomeController.welcome);
 router.post('/signup', controller.AuthController.signup);
 router.post('/login', controller.AuthController.login);
 
