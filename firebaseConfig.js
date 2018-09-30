@@ -1,5 +1,7 @@
-// Initialize Firebase
-// TODO: Replace with your project's customized code snippet
+/**
+ * Your Firebase config
+ */ 
+
 var firebase = require("firebase");
         var config = {
         apiKey: "AIzaSyCwtsJU-pX7cpnNhYzdJ_4q1qSmqvVAsRI",

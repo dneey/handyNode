@@ -1,13 +1,27 @@
-const express = require('express');
-const app = express(); 
+/**
+ * This is the entry point of the application
+ * 
+ * The core setup of the framework
+ */
 
-var bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
+const engines = require('consolidate');
+const routes = require('./routes/api');
 const PORT = process.env.PORT || 3000;
 
+const app = express(); 
+app.engine('hbs', engines.handlebars);
 
-var routes = require('./routes/api');
 
-// Apply Middleware
+
+
+
+/**
+ * Applies the body Parser middleware by default to the routes
+ * 
+ * You can swap this out with whatever you want
+ */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(routes);

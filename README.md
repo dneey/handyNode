@@ -1,5 +1,5 @@
 # HandyNode
-A mini node js boilerplate 😅.
+A mini node js framework for api development 😅.
 
 ## Features
 ### 1. Fluent Database ORM 
