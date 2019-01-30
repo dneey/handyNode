@@ -1,5 +1,5 @@
 # HandyNode
-A mini node js framework for web and api development 😅.
+A mini node js framework for api development 😅.(Personal Project)
 
 ## Features
 ### 1. Fluent Database ORM 
