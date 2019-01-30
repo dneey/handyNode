@@ -2,8 +2,8 @@
 A mini node js framework for api development 😅.(Personal Project)
 
 ## Features
-### 1. Fluent Database ORM 
- -- HandyNode uses sequelize to make access to your relational databases a breeze. (link to sequelize)
+### 1.Routing
+ -- Out of the box routing with express.
  
 ## More Features coming soon..
 
