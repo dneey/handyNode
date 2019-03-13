@@ -6,14 +6,10 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const engines = require('consolidate');
 const routes = require('./routes/api');
 const PORT = process.env.PORT || 3000;
 
 const app = express(); 
-app.engine('hbs', engines.handlebars);
-
-
 
 
 
@@ -25,8 +21,6 @@ app.engine('hbs', engines.handlebars);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/api', routes);
-
-
 
 
 
