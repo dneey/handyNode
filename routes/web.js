@@ -18,10 +18,7 @@ const router = express.Router();
 const controller = require('../controllers/Controller'); // Require controller Register
 
 
-router.get('/', function(req, res){
-    res.redirect('/api/welcome');
-});
-router.get('/welcome', controller.ApiController.welcome);
+router.get('/', controller.HomeController.welcome);
 
 
 

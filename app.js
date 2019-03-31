@@ -6,7 +6,8 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const routes = require('./routes/api');
+const apiRoutes = require('./routes/api');
+const webRoutes = require('./routes/web');
 const PORT = process.env.PORT || 3000;
 
 const app = express(); 
@@ -20,10 +21,9 @@ const app = express();
  */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/api', routes);
 
-
-
+app.use('/', webRoutes);
+app.use('/api', apiRoutes);
 app.listen(PORT, function () {
     console.log('now listening on port ' + PORT);
 });
