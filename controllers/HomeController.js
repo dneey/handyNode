@@ -1,10 +1,11 @@
-/**
- * Home Controller --defualt
- * Returns the welcome page.
- */
-
-exports.welcome = function (req, res) {
-    // Gets the root directory
-    res.sendFile(`${process.cwd()}/views/welcome.html`);
-
+import moment from 'moment';
+class HomeController {
+  static index(req, res) {
+    return res.json({
+      title: 'Handy Node',
+      message: 'Build something amazing!',
+      status: '200'
+    });
+  }
 }
+export default HomeController;

@@ -1,27 +1,7 @@
-/**
- * 
- * -------------------------------------------------------------
- * 
- * This is where you register your routes.
- * 
- * Simply call the router object and assign your method.
- * 
- * You can assign  a callback or simply call a controller.
- * 
- * 
- * --------------------------------------------------------------
- */
-
-
-const express = require('express');
+import express from 'express';
+import HomeController from '../controllers/HomeController';
 const router = express.Router();
-const controller = require('../controllers/Controller'); // Require controller Register
 
+router.get('/', HomeController.index);
 
-router.get('/', controller.HomeController.welcome);
-
-
-
-
-// Export the entire router to be accessed in the main app/server.js
-module.exports = router;
+export default router;
